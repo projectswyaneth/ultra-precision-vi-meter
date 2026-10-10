@@ -243,6 +243,39 @@ On first power-up the meter runs its zero-offset calibration and shows
 `CALIBRATING... / OPEN PROBES` — leave the probes unconnected until the splash
 screen appears.
 
+## Credits
+
+A six-person build. The work overlapped heavily — most of the firmware was
+written, read and debugged collectively, and the board was populated by several
+hands — so the list below records where each person led or contributed rather
+than carving the project into exclusive territories.
+
+**Uchitha Induranga** — PCB design, layout and etching; enclosure and panel
+layout; sensor soldering and board population; firmware, including the INA226
+current-measurement path.
+
+**Thamindu Nisal** — Sensor soldering and board population; wiring harness and
+final assembly; hardware bring-up and fault-finding on the completed unit.
+
+**Yaneth De Alwis** — Sensor soldering and board population; firmware,
+including the INA226 driver, its calibration and the mA / µA scaling.
+
+**Vidumini Sawandi** — Firmware; the wireless path — HC-05 on USART1,
+switch-gated streaming and the ASCII telemetry format; co-author of the
+companion Android application; project documentation.
+
+**Yahani Jayawardena** — Firmware; the wireless path and its five-second send
+cadence; co-author of the companion Android application that pairs over SPP and
+displays live readings; project documentation.
+
+**Yohara Perera** — Firmware; the voltage acquisition chain — ADC oversampling,
+the 512-sample zero-offset calibration and its persistence across resets, and
+the divider reconstruction maths; the block and circuit diagrams documenting the
+system end to end; project documentation.
+
+Testing and calibration of the finished instrument were carried out by the whole
+team. Full detail in [`CONTRIBUTORS.md`](CONTRIBUTORS.md).
+
 ## Licence
 
 Released under the MIT Licence. See [`LICENSE`](LICENSE).
